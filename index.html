@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The GUIDON COA RecWeek 2024</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a class="nav-logo" href="#"></a></li>
+                    <li><a href="#">Home</a></li> 
+                    <li><a href="https://theguidon.com/about/" target="_blank">About</a></li>
+                    <li class="navbar_dropdown">
+                        <button style="border-bottom:2px solid #ffffff00">Clusters<img src="images\drop-down.svg" alt="Dropdown arrow"/></button>
+                        <!-- Dropdown content here -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="front-page">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio maiores nihil in, nemo fugit numquam quo doloribus, quis, ea iusto dolor! Tenetur aspernatur modi, accusamus quas quasi veritatis impedit.
+                </p>
+            </div>
+            <div class="video-page">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum est quam maxime adipisci dolorum, amet beatae, veritatis neque quisquam, molestiae officia ipsam eum nihil dolores sequi. Eligendi tempora omnis dicta.
+                </p>
+            </div>
+            <div class="writing-cluster">
+                <p>Writing Cluster Content</p>
+            </div>
+            <div class="organizational-cluster">
+                <p>Organizational Cluster Content</p>
+            </div>
+            <div class="design-cluster">
+                <p>Design Cluster Content</p>
+            </div>
+            <footer>
+                <p>Footer Content</p>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script>
+            $(window).scroll(function(){
+                if($(window).scrollTop() > $(window).height()) {
+                    $("nav").addClass("transition");
+                }
+                else {
+                    $("nav").removeClass("transition");
+                }
+            });
+        </script>
+    </body>
+</html>
