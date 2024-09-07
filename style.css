@@ -1,66 +1,404 @@
-html, body {
-    margin: o;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.dropdown {
+  display: inline-block;
+  max-width: 150px;
+}
+
+.dropdown a img {
+  margin-left: 10px;
+}
+
+.dropdown a {
+  max-width: 250px;
+  display: flex;
+  justify-content: flex-start;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+.dropdown .content {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 95%);
+  min-width: 100px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+.dropdown:hover .content {
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: white;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+nav .nav-apply-now {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  margin-left: 500px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav .nav-apply-now {
+    margin-left: 0;
     width: 100%;
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
 }
-
-body {font-family: 'Times New Roman', Times, serif;}
-
-a,body,html {color: #1c1c1c}
-
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    letter-spacing: 1px;
-}
-
-button {cursor: pointer}
 
 .nav-container {
-    width: 100%;
-    background-color: none;
+  width: 100%;
+  height: auto;
+  margin-top: -20px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 nav {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 10px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: fle;
+  gap: 0.5rem;
+  z-index: 1;
+  transition: background-color 0.5s ease;
+}
+
+nav.transition {
+  background-color: #1c4480;
+}
+
+nav.transition .nav-apply-now {
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #1c4480;
 }
 
 nav ul {
-    list-style: none;
-    background: none;
-    overflow: hidden;
-    color: white;
-    padding: 0;
-    text-align: left;
-    margin: 0;
-    transition: opacity .5s;
-} 
-
-nav.transition ul {
-    background: #1c4480;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline-block;
-    padding: 20px;
-}
-
-.nav-logo {
-    background: url(images\logo-white.svg);
-    background-size: cover;
-    width: 3rem
+  display: inline-block;
+  padding: 20px;
 }
 
 .front-page {
-    height: 100vh;
+  height: 103vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.front-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(28, 68, 128, 0.5), rgba(28, 68, 128, 0.5)),
+    url("images/bg0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+.main-text h2 {
+  font-weight: 100;
+  font-size: 18px;
+  margin-top: -10px;
+}
+
+.main-text button {
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #1c4480;
 }
 
 .video-page {
-    height: 100vh;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  padding-top: 60px;
+}
+
+.video-page .text {
+  width: 350px;
+  margin-right: 50px;
+}
+
+.video-page .text p {
+  font-size: 19px;
+}
+
+.video-page .text h1 {
+  font-size: 35px;
+  color: #1c4480;
+}
+
+.video-page > * {
+  width: 600px;
+}
+
+.writing-cluster {
+  width: 100%;
+  height: 75vh;
+  display: grid;
+  grid-template-rows: 100px 500px;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+.writing-cluster .clusters-writing {
+  display: grid;
+  width: 1000px;
+  height: 500px;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: 150px 150px 150px;
+  margin: 0 auto;
+}
+
+.writing-cluster .clusters-writing button {
+  background-color: grey;
+  margin: 10px;
+  max-width: 300px;
+  max-height: 150px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+
+.organizational-cluster {
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  grid-template-rows: 100px 500px;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+.organizational-cluster .clusters-organizational {
+  display: grid;
+  width: 1000px;
+  height: 500px;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: 150px 150px;
+  margin: 0 auto;
+}
+
+.organizational-cluster .clusters-organizational button {
+  background-color: grey;
+  margin: 10px;
+  max-width: 300px;
+  max-height: 150px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+
+.design-cluster {
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  grid-template-rows: 100px 500px;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.design-cluster .clusters-design {
+  display: grid;
+  width: 1000px;
+  height: 500px;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: 150px 150px;
+  margin: 0 auto;
+}
+
+.design-cluster .clusters-design button {
+  background-color: grey;
+  margin: 10px;
+  max-width: 300px;
+  max-height: 150px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+
+footer {
+  display: flex; /* Enables Flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column; /* Stack children vertically */
+  width: 100%;
+  height: 50vh; /* Adjust height as needed */
+  background-image: url("images/footer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.footer-content {
+  text-align: center; /* Centers text inside the content */
+  color: white; /* Ensure text is visible on dark background */
+  z-index: 2; /* Ensure content is above the dark overlay */
+}
+
+.container footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.container footer * {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.container footer button {
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #1c4480;
+}
+
+#news {
+  background-color: #1c4480;
+}
+#sports {
+  background-color: #1c4480;
+}
+#inquiry {
+  background-color: #8f181b;
+}
+#beyond-loyola {
+  background-color: #d4b835;
+}
+#features {
+  background-color: #009c65;
+}
+#vantage-magazine {
+  background-color: #5e61ba;
+}
+#broadcast-news {
+  background-color: #fc9724;
+}
+#science-and-technology {
+  background-color: #09a1f6;
+}
+#social-media {
+  background-color: #11294d;
+}
+#human-resources {
+  background-color: #006944;
+}
+#externals {
+  background-color: #a18c28;
+}
+#research-and-development {
+  background-color: #5c0f11;
+}
+#graphic-design {
+  background-color: #6a91cd;
+}
+#photos {
+  background-color: #e4bb4e;
+}
+#video-production {
+  background-color: #dc676a;
+}
+#digital-development {
+  background-color: #53bc91;
+}
+button:hover {
+  transform: scale(1.1) rotate(3deg);
 }

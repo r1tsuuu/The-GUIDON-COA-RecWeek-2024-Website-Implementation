@@ -1,59 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The GUIDON COA RecWeek 2024</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li><a class="nav-logo" href="#"></a></li>
-                    <li><a href="#">Home</a></li> 
-                    <li><a href="https://theguidon.com/about/" target="_blank">About</a></li>
-                    <li class="navbar_dropdown">
-                        <button style="border-bottom:2px solid #ffffff00">Clusters<img src="images\drop-down.svg" alt="Dropdown arrow"/></button>
-                        <!-- Dropdown content here -->
-                    </li>
-                </ul>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The GUIDON COA RecWeek 2024</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="nav-container">
+      <nav>
+        <ul>
+          <li>
+            <a class="nav-logo" href="#">
+              <img
+                id="logo"
+                src="images/logo-white.svg"
+                style="width: 30px; height: 40px"
+              />
+            </a>
+          </li>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="https://theguidon.com/about/" target="_blank">About</a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button>
+                Clusters <img src="images\drop-down.svg" alt="" />
+              </button>
+              <div class="content">
+                <a href="#writing-cluster"
+                  >Writing Cluster<img src="images\arrow-right.svg" alt=""
+                /></a>
+                <a href="#organizational-cluster"
+                  >Organizational Cluster<img
+                    src="images\arrow-right.svg"
+                    alt=""
+                /></a>
+                <a href="#design-cluster"
+                  >Design Cluster<img src="images\arrow-right.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="nav-apply-now"
+              onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfjmwB7G7OwttQ0MgoccQZ0n9sf_N6zZaa14AFlJugW5JVv-A/closedform', '_blank')"
+            >
+              Apply Now
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <div class="container">
+      <section class="front-page">
+        <div class="main-text">
+          <h1 style="font-size: 95px; margin-bottom: 30px">
+            Forward with the Truth.
+          </h1>
+          <h2>The GUIDON COA RecWeek 2024</h2>
+          <h2 style="margin-bottom: 30px">August 27 to August 30</h2>
+          <button
+            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfjmwB7G7OwttQ0MgoccQZ0n9sf_N6zZaa14AFlJugW5JVv-A/closedform', '_blank')"
+          >
+            Apply Now
+          </button>
         </div>
-        <div class="container">
-            <div class="front-page">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio maiores nihil in, nemo fugit numquam quo doloribus, quis, ea iusto dolor! Tenetur aspernatur modi, accusamus quas quasi veritatis impedit.
-                </p>
-            </div>
-            <div class="video-page">
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum est quam maxime adipisci dolorum, amet beatae, veritatis neque quisquam, molestiae officia ipsam eum nihil dolores sequi. Eligendi tempora omnis dicta.
-                </p>
-            </div>
-            <div class="writing-cluster">
-                <p>Writing Cluster Content</p>
-            </div>
-            <div class="organizational-cluster">
-                <p>Organizational Cluster Content</p>
-            </div>
-            <div class="design-cluster">
-                <p>Design Cluster Content</p>
-            </div>
-            <footer>
-                <p>Footer Content</p>
-            </footer>
+      </section>
+
+      <section class="video-page">
+        <div class="text">
+          <p>
+            This year, The GUIDON marks its 95th founding anniversary with a
+            mission to Forward with the Truth.
+          </p>
+          <h1>
+            As such, advancing the causes of society’s marginalized members is
+            crucial in the publication’s bid to carry the Truth forward.
+          </h1>
         </div>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-        <script>
-            $(window).scroll(function(){
-                if($(window).scrollTop() > $(window).height()) {
-                    $("nav").addClass("transition");
-                }
-                else {
-                    $("nav").removeClass("transition");
-                }
-            });
-        </script>
-    </body>
+        <div class="video">
+          <iframe
+            class="gdrive-vid"
+            src="https://drive.google.com/file/d/1OpApFnA5Q67qXhPwt8SmKWEV10A-F7zk/preview"
+            allow="autoplay"
+            style="width: 600px; height: 350px"
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="writing-cluster" class="writing-cluster">
+        <h1>Writing Cluster</h1>
+        <div class="clusters-writing">
+          <button
+            id="news"
+            onclick="window.open('https://join.theguidon.com/news/', '_blank')"
+          >
+            <h2>News</h2>
+          </button>
+          <button
+            id="sports"
+            onclick="window.open('https://join.theguidon.com/sports/', '_blank')"
+          >
+            <h2>Sports</h2>
+          </button>
+          <button
+            id="inquiry"
+            onclick="window.open('https://join.theguidon.com/inquiry/', '_blank')"
+          >
+            <h2>Inquiry</h2>
+          </button>
+          <button
+            id="beyond-loyola"
+            onclick="window.open('https://join.theguidon.com/beyond-loyola/', '_blank')"
+          >
+            <h2>Beyond Loyola</h2>
+          </button>
+          <button
+            id="features"
+            onclick="window.open('https://join.theguidon.com/features/', '_blank')"
+          >
+            <h2>Features</h2>
+          </button>
+          <button
+            id="vantage-magazine"
+            onclick="window.open('https://join.theguidon.com/vantage-magazine/', '_blank')"
+          >
+            <h2>Vantage Magazine</h2>
+          </button>
+
+          <button
+            id="broadcast-news"
+            onclick="window.open('https://join.theguidon.com/broadcast-news/', '_blank')"
+          >
+            <h2>Broadcast News</h2>
+          </button>
+          <button
+            id="science-and-technology"
+            onclick="window.open('https://join.theguidon.com/sci-tech/', '_blank')"
+          >
+            <h2>Science and Technology</h2>
+          </button>
+        </div>
+      </section>
+
+      <section id="organizational-cluster" class="organizational-cluster">
+        <h1>Organizational Cluster</h1>
+        <div class="clusters-organizational">
+          <button
+            id="social-media"
+            onclick="window.open('https://join.theguidon.com/social-media/', '_blank')"
+          >
+            <h2>Social Media</h2>
+          </button>
+          <button
+            id="human-resources"
+            onclick="window.open('https://join.theguidon.com/human-resources/', '_blank')"
+          >
+            <h2>Human Resources</h2>
+          </button>
+          <button
+            id="externals"
+            onclick="window.open('https://join.theguidon.com/externals/', '_blank')"
+          >
+            <h2>Externals</h2>
+          </button>
+          <button
+            id="research-and-development"
+            onclick="window.open('https://join.theguidon.com/research-and-development/', '_blank')"
+          >
+            <h2>Research and Development</h2>
+          </button>
+        </div>
+      </section>
+
+      <section id="design-cluster" class="design-cluster">
+        <h1>Design Cluster</h1>
+        <div class="clusters-design">
+          <button
+            id="graphic-design"
+            onclick="window.open('https://join.theguidon.com/graphic-design/', '_blank')"
+          >
+            <h2>Graphic Design</h2>
+          </button>
+          <button
+            id="photos"
+            onclick="window.open('https://join.theguidon.com/photos/', '_blank')"
+          >
+            <h2>Photos</h2>
+          </button>
+          <button
+            id="video-production"
+            onclick="window.open('https://join.theguidon.com/video-production/', '_blank')"
+          >
+            <h2>Video Production</h2>
+          </button>
+          <button
+            id="digital-development"
+            onclick="window.open('https://join.theguidon.com/digital-development/', '_blank')"
+          >
+            <h2>Digital Development</h2>
+          </button>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <h1>Honor the Past. Forward with the Truth.</h1>
+          <h1>Join The GUIDON.</h1>
+          <button
+            class="nav-apply-now"
+            style="margin: 20px 0"
+            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfjmwB7G7OwttQ0MgoccQZ0n9sf_N6zZaa14AFlJugW5JVv-A/closedform', '_blank')"
+          >
+            Apply Now
+          </button>
+          <p style="margin-top: 50px; opacity: 0.6; font-size: 11px">
+            © The GUIDON 2024. All images used belongs to The GUIDON.
+          </p>
+          <p style="opacity: 0.6; font-size: 11px">
+            Implemented by Neil Asuncion Biason in fulfillment of the
+            requirements for The Guidon - Digital Development (Tech)
+            requirements.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > $(window).height()) {
+          $("nav").addClass("transition");
+        } else {
+          $("nav").removeClass("transition");
+        }
+      });
+    </script>
+  </body>
 </html>
